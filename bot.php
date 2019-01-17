@@ -78,13 +78,14 @@ while(TRUE){
    $view=$get["viewAward"];
    $rview=$get["rankViewAward"];
    $rtime=$get["readTimeAward"];
-   echo $putih."[".$turkis."•".$putih."] Status : ".$ijo."Sukses ".$putih." || ".$putih."Code :$turkis 200". $putih."Reward Nonton : +".$ijo.$view;
-echo "\n";
-echo $putih."Rank View Reward: ".$ijo.$rview;
+   echo $putih."[".$turkis."•".$putih."] Status : ".$ijo."Sukses ".$putih." || ".$putih."Code :$ijo 200 ".$putih."Reward Nonton : +".$ijo.$view;
+echo "\n";)
+echo $putih."[".$turkis."•".$putih."] Status :$ijo Sukses ".$putih." || Code :$ijo 200 ".$putih."Rank View Reward: ".$ijo.$rview;
    echo "\n";
-echo $putih."Rank Time Reward: ".$ijo.$rtime;
+echo $putih."[".$turkis."•".$putih."] Status :$ijo Sukses ".$putih." || Code :$ijo 200 ".$putih."Rank Time Reward: ".$ijo.$rtime;
    echo "\n";
-echo $
+echo $ijo."================================================== \n\n";
+   
 sleep(1);
   }
 if($e->errcode=="500"){
