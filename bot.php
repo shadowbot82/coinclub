@@ -21,7 +21,7 @@ print $ijo."
 |_____|____|__|__/ |__|_____|______||____/\n\n";
 echo $kuning."Bot Coin Club (aplikasi penghasil BTC,ETH,EOS,ICH,BCH) \n";
 echo $putih."=================================================== \n";
-echo $kuning."[".$putih."created : ".$ijo."Aris Ahmad Risadi".$kuning."]".$putih." || ".$kuning."[".$putih."code invite : ".$ijo."WK2XZO".$kuning."]".$t;
+echo $kuning."[".$putih."created : ".$ijo."Shadow Bot".$kuning."]".$putih." || ".$kuning."[".$putih."code invite : ".$ijo."WK2XZO".$kuning."]".$t;
 echo $putih."=================================================== \n\n";
 //intro 2
 sleep(1);
@@ -63,7 +63,7 @@ else{
  echo "\n\n";
 while(TRUE){
  $curl=curl_init();
- curl_setopt_array($curl,array(CURLOPT_URL=>"http://api.coinclub.global/api/v1/post/estimate",CURLOPT_RETURNTRANSFER=>true,CURLOPT_ENCODING=>"",CURLOPT_MAXREDIRS=>10,CURLOPT_TIMEOUT=>30,CURLOPT_HTTP_VERSION=>CURL_HTTP_VERSION_1_1,CURLOPT_CUSTOMREQUEST=>"POST",CURLOPT_POSTFIELDS=>"userId=".$config["userId"]."&postId=".rand(1079502,1113452)."&platform=1&accessKeyId=".$config["accessKeyId"]."&timestamp=1546954347645&versionCode=1.5.8&nonce=".$config["nonce"]."&version=1",CURLOPT_HTTPHEADER=>array("Accept-Encoding: gzip","Connection: Keep-Alive","Content-Length: 188","Content-Type: application/x-www-form-urlencoded","Host: api.coinclub.global","User-Agent: okhttp/3.9.0","token: ".$config["token"],"deviceId: ".$config["deviceId"],),));
+ curl_setopt_array($curl,array(CURLOPT_URL=>"http://api.coinclub.global/api/v1/message/getRedPoint?userId=$config['userId']&platform=1&timestamp=1547719157208&accessKeyId=$config['accessKeyId']&versionCode=1.5.8&nonce=$connfig['nonce']&version=1",CURLOPT_RETURNTRANSFER=>true,CURLOPT_ENCODING=>"",CURLOPT_MAXREDIRS=>10,CURLOPT_TIMEOUT=>30,CURLOPT_HTTP_VERSION=>CURL_HTTP_VERSION_1_1,CURLOPT_CUSTOMREQUEST=>"POST",CURLOPT_POSTFIELDS=>"userId=".$config["userId"]."&postId=".rand(1079502,1113452)."&platform=1&accessKeyId=".$config["accessKeyId"]."&timestamp=1546954347645&versionCode=1.5.8&nonce=".$config["nonce"]."&version=1",CURLOPT_HTTPHEADER=>array("Accept-Encoding: gzip","Connection: Keep-Alive","Content-Length: 188","Content-Type: application/x-www-form-urlencoded","Host: api.coinclub.global","User-Agent: okhttp/3.9.0","token: ".$config["token"],"deviceId: ".$config["deviceId"],),));
  $response=curl_exec($curl);
  $err=curl_error($curl);
  curl_close($curl);
