@@ -52,6 +52,14 @@ echo"\n";
 else{
  die("Config Kamu Salah.");
 }
+
+ echo $putih."Bot akan jalan dalam 5 detik ";
+ $a=0;$r=5;while($a<$r){
+  $a++;
+  sleep(1);
+ echo ".";
+  }
+ echo "\n";
 while(TRUE){
  $curl=curl_init();
  curl_setopt_array($curl,array(CURLOPT_URL=>"http://api.coinclub.global/api/v1/post/estimate",CURLOPT_RETURNTRANSFER=>true,CURLOPT_ENCODING=>"",CURLOPT_MAXREDIRS=>10,CURLOPT_TIMEOUT=>30,CURLOPT_HTTP_VERSION=>CURL_HTTP_VERSION_1_1,CURLOPT_CUSTOMREQUEST=>"POST",CURLOPT_POSTFIELDS=>"userId=".$config["userId"]."&postId=".rand(1079502,1113452)."&platform=1&accessKeyId=".$config["accessKeyId"]."&timestamp=1546954347645&versionCode=1.5.8&nonce=".$config["nonce"]."&version=1",CURLOPT_HTTPHEADER=>array("Accept-Encoding: gzip","Connection: Keep-Alive","Content-Length: 188","Content-Type: application/x-www-form-urlencoded","Host: api.coinclub.global","User-Agent: okhttp/3.9.0","token: ".$config["token"],"deviceId: ".$config["deviceId"],),));
@@ -61,13 +69,6 @@ while(TRUE){
  if($err){
   echo"cURL Error #:".$err;
  }
- echo $putih."Bot akan jalan dalam 5 detik ";
- $a=0;$r=5;while($a<$r){
-  $a++;
-  sleep(1);
- echo ".";
-  }
- echo "\n";
  else{
   $e=json_decode($response);
   if($e->errcode=="1000"){
