@@ -21,8 +21,8 @@ print $ijo."
 |_____|____|__|__/ |__|_____|______||____/\n\n";
 echo $kuning."Bot Coin Club (aplikasi penghasil BTC,ETH,EOS,ICH,BCH) \n";
 echo $putih."=================================================== \n";
-echo $kuning."[".$putih."created : ".$ijo."Shadow Bot".$kuning."]".$putih." || code invite : ".$ijo."WK2XZO \n";
-echo $putih."==================================================== \n\n";
+echo $kuning."[".$putih."created : ".$ijo."Shadow Bot".$kuning."]".$putih." || ".$kuning."[".$putih."code invite : ".$ijo."WK2XZO".$kuning."]".$t;
+echo $putih."=================================================== \n\n";
 //intro 2
 sleep(1);
 echo $putih."[".$kuning."!".$putih."]".$turkis."Login ";
@@ -78,13 +78,13 @@ while(TRUE){
    $view=$get["viewAward"];
    $rview=$get["rankViewAward"];
    $rtime=$get["readTimeAward"];
-   echo $putih."[".$turkis."•".$putih."] Status : ".$ijo."Sukses ".$putih." || ".$putih."Code :$ijo 200 ".$putih."Reward Nonton : +".$ijo.$view;
-echo "\n";)
-echo $putih."[".$turkis."•".$putih."] Status :$ijo Sukses ".$putih." || Code :$ijo 200 ".$putih."Rank View Reward: ".$ijo.$rview;
+   echo $putih."[".$turkis."•".$putih."] Status : ".$ijo."Sukses ".$putih."|| ".$putih."Code :$ijo 200 ".$putih."|| Reward Nonton : +".$ijo.$view;
+echo "\n";
+echo $putih."[".$turkis."•".$putih."] Status :$ijo Sukses ".$putih."|| Code :$ijo 200 ".$putih."|| Rank View Reward: ".$ijo.$rview;
    echo "\n";
-echo $putih."[".$turkis."•".$putih."] Status :$ijo Sukses ".$putih." || Code :$ijo 200 ".$putih."Rank Time Reward: ".$ijo.$rtime;
+echo $putih."[".$turkis."•".$putih."] Status :$ijo Sukses ".$putih."|| Code :$ijo 200 ".$putih."|| Rank Time Reward: ".$ijo.$rtime;
    echo "\n";
-echo $ijo."================================================== \n\n";
+echo $ijo."========================================================== \n\n";
    
 sleep(1);
   }
