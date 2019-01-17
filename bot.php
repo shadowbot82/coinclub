@@ -36,7 +36,7 @@ echo $ijo."Note : \n";
 echo $ijo."[ENG] Bots Are Running ... PLEASE WAIT .. \n";
 echo $ijo."[ENG] IF THERE IS NO RESPONSE FROM SERVER, THEN THE TOKEN OR CONFIG IS WRONG \n\n";
 echo $ijo."[IDN] Bot akan jalan ... Tunggu Sebentar ... \n";
-echo $ijo."[IDN] Jika Tidak ada respon dari server, mohon di cek kembali token/confignya \n";
+echo $ijo."[IDN] Jika Tidak ada respon dari server, mohon di cek kembali token/confignya \n\n";
 require"cfg.php";
 $urls[]=array("url"=>"http://api.coinclub.global/api/v1/user/getUserDetail?token=".$config["token"]."&fromUserId=".$config["fromUserId"]."&userId=".$config["userId"]."&platform=1&accessKeyId=".$config["accessKeyId"]."&timestamp=1546935030192&versionCode=1.5.8&nonce=".$config["nonce"]."&version=1");$responsx=$sdata->sdata($urls);
 unset($url);$jsonAuth=json_decode($responsx[0]["respons"],true);
@@ -44,7 +44,7 @@ if($jsonAuth["errcode"]==1000&&!empty($jsonAuth["data"]["user"]["userName"])){
 echo $kuning."[".$putih."•".$kuning."]". $turkis." Informasi Akun \n";
 echo $putih."[".$turkis."*".$putih."] Balance : ".$ijo.$jsonAuth["data"]["totalBalance"].$t;
 echo $putih."[".$turkis."*".$putih."] User Id : ".$ijo.$jsonAuth["data"]["user"]["userId"].$t;
-echo $putih."[".$turkis."*".$putih."] User Name : ".$ijo.$jsonAuth["data"]["user"]["userName"].$t;
+echo $putih."[".$turkis."*".$putih."] User Name : ".$ijo.$jsonAuth["data"]["user"]["userName"].$t.$t;
 
 echo $putih."[√] Login Success... ";
 echo"\n\n";
