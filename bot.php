@@ -1,8 +1,23 @@
 <?php 
 @system("clear");
+//warna
+$biru="\033[1;34m";
+$turkis="\033[1;36m";
+$ijo="\033[92m";
+$putih="\033[1;37m";
+$pink="\033[1;35m";
+$red="\033[1;31m";
+$kuning="\033[1;33m";
+
 date_default_timezone_set("Asia/Jakarta");
 require_once("sdata-modules.php");
-echo"";
+//intro
+print $ijo."
+ _____ ____ ___ __   __ _____
+|  ___|    |   |  | /  |
+| |   | || |   |  |/   |
+| |___| || |   |   /|  |
+|_____|____|___|__/ |__|
 
 echo"Support By Subscribe Me👉http://www.youtube.com/DigitalDoctorChannel";
 echo"[ENG] Bots Are Running ... PLEASE WAIT ..";
