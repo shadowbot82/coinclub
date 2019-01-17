@@ -21,11 +21,11 @@ print $ijo."
 |_____|____|__|__/ |__|_____|______||____/\n\n";
 echo $kuning."Bot Coin Club (aplikasi penghasil BTC,ETH,EOS,ICH,BCH) \n";
 echo $putih."=================================================== \n";
-echo $kuning."[".$putih."created : ".$ijo."Shadow Bot".$kuning."]".$putih." || ".$kuning."[".$putih."code invite : ".$ijo."WK2XZO".$kuning."]".$t;
+echo $kuning."[".$putih."created : ".$ijo."Aris Ahmad Risadi".$kuning."]".$putih." || ".$kuning."[".$putih."code invite : ".$ijo."WK2XZO".$kuning."]".$t;
 echo $putih."=================================================== \n\n";
 //intro 2
 sleep(1);
-echo $putih."[".$kuning."!".$putih."]".$turkis."Login ";
+echo $putih."[".$kuning."!".$putih."]".$turkis." Login ";
 $x=0;$c=5;while($x<$c){
  $x++;
  sleep(1);
