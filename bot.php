@@ -17,28 +17,78 @@ print $ijo."
 |  ___|    |  |  | /  |  ___| | | | | _  \
 | |   | || |  |  |/   | |   | | |_| |____/ $turkis
 | |___| || |  |   /|  | |___| |___ _| _  \
-|_____|____|__|__/ |__|_____|______||____/\n";
+|_____|____|__|__/ |__|_____|______||____/\n\n";
+echo $kuning."Bot Coin Club (aplikasi penghasil BTC,ETH,EOS,ICH,BCH) \n";
 echo $putih."======================================= \n";
-echo $kuning."[".$putih."created : ".$ijo."Shadow Bot".$kuning."]".$putih." || code invite : ".$ijo."WK2XZO \n";
+echo $kuning."[".$putih."created : ".$ijo."Shadow Bot".$kuning."]".$putih." || code invite : ".$ijo."WK2XZO \n\n";
 echo $putih."======================================= \n";
 //intro 2
-echo $putih."[".$kuning."!".$putih."]".$turkis."Login \n";
+sleep(1);
+echo $putih."[".$kuning."!".$putih."]".$turkis."Login ";
+$x=0;$c=5;while($x<$c){
+ $x++;
+ sleep(1);
+echo"•";
+ }
+echo"\n";
 echo $ijo."Note : \n";
-echo"[ENG] Bots Are Running ... PLEASE WAIT ..";
-echo"[ENG] IF THERE IS NO RESPONSE FROM SERVER, THEN THE TOKEN OR CONFIG IS WRONG";
-echo"[IDN] Bot akan jalan ... Tunggu Sebentar ...";
-echo"[IDN] Jika Tidak ada respon dari server, mohon di cek kembali token/confignya";
+echo $ijo."[ENG] Bots Are Running ... PLEASE WAIT ..";
+echo $ijo."[ENG] IF THERE IS NO RESPONSE FROM SERVER, THEN THE TOKEN OR CONFIG IS WRONG";
+echo $ijo."[IDN] Bot akan jalan ... Tunggu Sebentar ...";
+echo $ijo."[IDN] Jika Tidak ada respon dari server, mohon di cek kembali token/confignya";
 require"DDC.php";
-$urls[]=array("url"=>"http://api.coinclub.global/api/v1/user/getUserDetail?token=".$config["token"]."&fromUserId=".$config["fromUserId"]."&userId=".$config["userId"]."&platform=1&accessKeyId=".$config["accessKeyId"]."&timestamp=1546935030192&versionCode=1.5.8&nonce=".$config["nonce"]."&version=1");$responsx=$sdata->sdata($urls);unset($url);$jsonAuth=json_decode($responsx[0]["respons"],true);if($jsonAuth["errcode"]==1000&&!empty($jsonAuth["data"]["user"]["userName"])){
+$urls[]=array("url"=>"http://api.coinclub.global/api/v1/user/getUserDetail?token=".$config["token"]."&fromUserId=".$config["fromUserId"]."&userId=".$config["userId"]."&platform=1&accessKeyId=".$config["accessKeyId"]."&timestamp=1546935030192&versionCode=1.5.8&nonce=".$config["nonce"]."&version=1");$responsx=$sdata->sdata($urls);
+unset($url);$jsonAuth=json_decode($responsx[0]["respons"],true);
+if($jsonAuth["errcode"]==1000&&!empty($jsonAuth["data"]["user"]["userName"])){
 echo $kuning."[".$putih."•".$kuning."]". $turkis." Informasi Akun \n";
-echo $putih."[°] Balance : ".$jsonAuth["data"]["totalBalance"]."
-[°] User Id : ".$jsonAuth["data"]["user"]["userId"]."
-";echo"[°] User Name : ".$jsonAuth["data"]["user"]["userName"]."";
+echo $putih."[".$turkis."*".$putih."] Balance : ".$ijo.$jsonAuth["data"]["totalBalance"]"\n";
+echo $putih."[".$turkis."*".$putih."] User Id : ".$ijo.$jsonAuth["data"]["user"]["userId"]"\n";
+echo $putih."[".$turkis."*".$putih."] User Name : ".$ijo.$jsonAuth["data"]["user"]["userName"]"\n";
 
-";echo"[☯️] Login Success...
-";echo"
+echo $putih."[√] Login Success... ";
+echo"\n";
 
-";}else{die("Your Config Wrong???.");}while(TRUE){$curl=curl_init();curl_setopt_array($curl,array(CURLOPT_URL=>"http://api.coinclub.global/api/v1/post/estimate",CURLOPT_RETURNTRANSFER=>true,CURLOPT_ENCODING=>"",CURLOPT_MAXREDIRS=>10,CURLOPT_TIMEOUT=>30,CURLOPT_HTTP_VERSION=>CURL_HTTP_VERSION_1_1,CURLOPT_CUSTOMREQUEST=>"POST",CURLOPT_POSTFIELDS=>"userId=".$config["userId"]."&postId=".rand(1079502,1113452)."&platform=1&accessKeyId=".$config["accessKeyId"]."&timestamp=1546954347645&versionCode=1.5.8&nonce=".$config["nonce"]."&version=1",CURLOPT_HTTPHEADER=>array("Accept-Encoding: gzip","Connection: Keep-Alive","Content-Length: 188","Content-Type: application/x-www-form-urlencoded","Host: api.coinclub.global","User-Agent: okhttp/3.9.0","token: ".$config["token"],"deviceId: ".$config["deviceId"],),));$response=curl_exec($curl);$err=curl_error($curl);curl_close($curl);if($err){echo"cURL Error #:".$err;}else{$e=json_decode($response);if($e->errcode=="1000"){$json=json_decode($response);$get=get_object_vars($json->data);$view=$get["viewAward"];$rview=$get["rankViewAward"];$rtime=$get["readTimeAward"];echo"View Reward: ".$view." | Rank View Reward: ".$rview." | Rank Time Reward: ".$rtime."
-";sleep(1);}if($e->errcode=="500"){echo"Maximum Reached
-";break;}}}
+}
+else{
+ die("Config Kamu Salah.");
+}
+while(TRUE){
+ $curl=curl_init();
+ curl_setopt_array($curl,array(CURLOPT_URL=>"http://api.coinclub.global/api/v1/post/estimate",CURLOPT_RETURNTRANSFER=>true,CURLOPT_ENCODING=>"",CURLOPT_MAXREDIRS=>10,CURLOPT_TIMEOUT=>30,CURLOPT_HTTP_VERSION=>CURL_HTTP_VERSION_1_1,CURLOPT_CUSTOMREQUEST=>"POST",CURLOPT_POSTFIELDS=>"userId=".$config["userId"]."&postId=".rand(1079502,1113452)."&platform=1&accessKeyId=".$config["accessKeyId"]."&timestamp=1546954347645&versionCode=1.5.8&nonce=".$config["nonce"]."&version=1",CURLOPT_HTTPHEADER=>array("Accept-Encoding: gzip","Connection: Keep-Alive","Content-Length: 188","Content-Type: application/x-www-form-urlencoded","Host: api.coinclub.global","User-Agent: okhttp/3.9.0","token: ".$config["token"],"deviceId: ".$config["deviceId"],),));
+ $response=curl_exec($curl);
+ $err=curl_error($curl);
+ curl_close($curl);
+ if($err){
+  echo"cURL Error #:".$err;
+ }
+ echo $putih."Bot akan jalan dalam 5 detik ";
+ $a=0;$r=5;while($a<$r){
+  $a++;
+  sleep(1);
+ echo ".";
+  }
+ echo "\n";
+ else{
+  $e=json_decode($response);
+  if($e->errcode=="1000"){
+   $json=json_decode($response);
+   $get=get_object_vars($json->data);
+   $view=$get["viewAward"];
+   $rview=$get["rankViewAward"];
+   $rtime=$get["readTimeAward"];
+   echo $putih."Reward Nonton : ".$ijo.$view;
+echo "\n";
+echo $putih."Rank View Reward: ".$ijo.$rview;
+   echo "\n";
+echo $putih."Rank Time Reward: ".$ijo.$rtime;
+   echo "\n";
+sleep(1);
+  }
+if($e->errcode=="500"){
+ echo"Maximum Reached \n";
+break;
+}
+ }
+}
+
 ?>
