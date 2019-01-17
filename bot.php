@@ -13,23 +13,28 @@ date_default_timezone_set("Asia/Jakarta");
 require_once("sdata-modules.php");
 //intro
 print $ijo."
- _____ ____ ___ __   __ _____ _ _   _ ___
-|  ___|    |   |  | /  |  ___| | | | | _  \
-| |   | || |   |  |/   | |   | | |_| |____/
-| |___| || |   |   /|  | |___| |___ _| _  \
-|_____|____|___|__/ |__|_____|______||____/
-
-echo"Support By Subscribe Me👉http://www.youtube.com/DigitalDoctorChannel";
+ _____ ____ __ __   __ _____ _ _   _ ___ 
+|  ___|    |  |  | /  |  ___| | | | | _  \
+| |   | || |  |  |/   | |   | | |_| |____/ $turkis
+| |___| || |  |   /|  | |___| |___ _| _  \
+|_____|____|__|__/ |__|_____|______||____/\n";
+echo $putih."======================================= \n";
+echo $kuning."[".$putih."created : ".$ijo."Shadow Bot".$kuning."]".$putih." || code invite : ".$ijo."WK2XZO \n";
+echo $putih."======================================= \n";
+//intro 2
+echo $putih."[".$kuning."!".$putih."]".$turkis."Login \n";
+echo $ijo."Note : \n";
 echo"[ENG] Bots Are Running ... PLEASE WAIT ..";
 echo"[ENG] IF THERE IS NO RESPONSE FROM SERVER, THEN THE TOKEN OR CONFIG IS WRONG";
 echo"[IDN] Bot akan jalan ... Tunggu Sebentar ...";
 echo"[IDN] Jika Tidak ada respon dari server, mohon di cek kembali token/confignya";
 require"DDC.php";
-$urls[]=array("url"=>"http://api.coinclub.global/api/v1/user/getUserDetail?token=".$config["token"]."&fromUserId=".$config["fromUserId"]."&userId=".$config["userId"]."&platform=1&accessKeyId=".$config["accessKeyId"]."&timestamp=1546935030192&versionCode=1.5.8&nonce=".$config["nonce"]."&version=1");$responsx=$sdata->sdata($urls);unset($url);$jsonAuth=json_decode($responsx[0]["respons"],true);if($jsonAuth["errcode"]==1000&&!empty($jsonAuth["data"]["user"]["userName"])){echo"[🇮🇩] ¤ACCOUNT INFORMATION¤ [🇮🇩]
-";echo"[°] Balance : ".$jsonAuth["data"]["totalBalance"]."
+$urls[]=array("url"=>"http://api.coinclub.global/api/v1/user/getUserDetail?token=".$config["token"]."&fromUserId=".$config["fromUserId"]."&userId=".$config["userId"]."&platform=1&accessKeyId=".$config["accessKeyId"]."&timestamp=1546935030192&versionCode=1.5.8&nonce=".$config["nonce"]."&version=1");$responsx=$sdata->sdata($urls);unset($url);$jsonAuth=json_decode($responsx[0]["respons"],true);if($jsonAuth["errcode"]==1000&&!empty($jsonAuth["data"]["user"]["userName"])){
+echo $kuning."[".$putih."•".$kuning."]". $turkis." Informasi Akun \n";
+echo $putih."[°] Balance : ".$jsonAuth["data"]["totalBalance"]."
 [°] User Id : ".$jsonAuth["data"]["user"]["userId"]."
-";echo"[°] User Name : ".$jsonAuth["data"]["user"]["userName"]."
-";echo"[🔼]⏭️ DIGITAL DOCTOR ⏮️[🔼]
+";echo"[°] User Name : ".$jsonAuth["data"]["user"]["userName"]."";
+
 ";echo"[☯️] Login Success...
 ";echo"
 
