@@ -13,11 +13,11 @@ date_default_timezone_set("Asia/Jakarta");
 require_once("sdata-modules.php");
 //intro
 print $ijo."
- _____ ____ ___ __   __ _____
-|  ___|    |   |  | /  |
-| |   | || |   |  |/   |
-| |___| || |   |   /|  |
-|_____|____|___|__/ |__|
+ _____ ____ ___ __   __ _____ _ _   _ ___
+|  ___|    |   |  | /  |  ___| | | | | _  \
+| |   | || |   |  |/   | |   | | |_| |____/
+| |___| || |   |   /|  | |___| |___ _| _  \
+|_____|____|___|__/ |__|_____|______||____/
 
 echo"Support By Subscribe Me👉http://www.youtube.com/DigitalDoctorChannel";
 echo"[ENG] Bots Are Running ... PLEASE WAIT ..";
