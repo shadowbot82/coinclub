@@ -73,6 +73,13 @@ function send($path,$post,$header){
  curl_close($ch);
  return$respons;
 }
+$h=0;$j=3;while($h<$j){
+ $h++;
+ sleep(1);
+ echo $putih.".";
+ 
+ }
+echo "\n";
 while(TRUE){
  $header="token: ab2407d114b54b0db60dea1c5cf3646f
 deviceId: ce0c9a0f7c6e0d5bCB5A28L9BT
@@ -94,10 +101,10 @@ $z=explode("",$header);
   $pr=$ambil["prizeType"];
   $bl=$ambi["balance"];
   $etq=$ambi["ethQuota"];
-  
-  echo"Prize Code :".$pr." | CCU Balance :".$bl." | ETH Quota :".$etq."";
-sleep(1);
 
+  echo $putih."[".$turkis."•".$putih."] Prize Code :".$ijo.$pr.$putih." | CCU Balance :".$ijo.$bl.$putih." | ETH Quota :".$ijo.$etq."";
+sleep(1);
+}}
 while(TRUE){
 
  $curl=curl_init();
