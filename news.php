@@ -73,6 +73,7 @@ function send($path,$post,$header){
  curl_close($ch);
  return$respons;
 }
+echo $turkis."Auto Spin ";
 $h=0;$j=3;while($h<$j){
  $h++;
  sleep(1);
