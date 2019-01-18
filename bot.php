@@ -239,7 +239,60 @@ else{
             sleep($sleep);
          }
          else{
-            echo$kuning.$msg.$t;}}sleep(1);echo$turkis."[w] watching video vip".$t;sleep(1);$limit=0;while(true){for($i=0;$i<$acc;$i++){sleep(1);$token=substr($config[$i],7,-22);$meid=substr($config[$i],-16);$js=json_decode(login($token,$meid),true);$nik=$js["data"]["userMsg"]["nickname"];echo$ijo."[•] ".$biru.substr($nik,0,8)." |] ";$token=substr($config[$i],7,-22);$meid=substr($config[$i],-16);$js=json_decode(video($token,$meid),true);$code=$js["code"];$msg=$js["msg"];$gold=$js["data"]["gold_flag"];$coun=$js["data"]["count"];$update=$js["data"]["isUpdate"];$vip=$js["data"]["userLevel"];if($code=="200"){echo$ijo."sukses$putih || gold +$ijo".$gold."$putih || vip: $turkis".$vip.$t;$limit=0;}else{echo$kuning.substr($msg,0,32).$t;$limit++;}sleep($sleep);}if($limit>=$acc){echo$ijo.$msgwe.$t;system("rm -rf user");break;}$q=0;sleep(1);echo$putih."[W] sleep:$ijo $sleep $putih sec ".$turkis."rolling ".$ijo;while($q<5){$q++;echo"•";sleep(1);}echo$t;}}
+            echo$kuning.$msg.$t;
+         }}
+      sleep(1);
+      echo$putih."[".$turkis."•".$putih."] ".$turkis."watching video vip";
+      $m=0;$w=3;while($q<$w){
+         $m++;
+         sleep(1);
+         echo $putih.".";
+         }
+      echo "\n";
+      sleep(1);
+      $limit=0;while(true){
+         for($i=0;$i<$acc;$i++){
+            sleep(1);
+ $token=substr($config[$i],7,-22);
+ $meid=substr($config[$i],-16);
+ $js=json_decode(login($token,$meid),true);
+ $nik=$js["data"]["userMsg"]["nickname"];
+
+  echo $putih."[".$ijo."•".$putih."] ".$turkis.substr($nik,0,8)." |] ";
+            $token=substr($config[$i],7,-22);
+            $meid=substr($config[$i],-16);
+            $js=json_decode(video($token,$meid),true);
+            $code=$js["code"];
+            $msg=$js["msg"];
+            $gold=$js["data"]["gold_flag"];
+            $coun=$js["data"]["count"];
+            $update=$js["data"]["isUpdate"];
+            $vip=$js["data"]["userLevel"];
+            if($code=="200"){
+               echo $putih."[".$turkis."•".$putih."] Status : ".$ijo."sukses$putih || gold +$ijo".$gold."$putih || vip: $turkis".$vip.$t;
+               $limit=0;
+            }
+            else{
+               echo$kuning.substr($msg,0,32).$t;
+               $limit++;
+            }
+            sleep($sleep);
+         }
+         if($limit>=$acc){
+            echo$ijo.$msgwe.$t;
+            system("rm -rf user");
+            break;
+         }
+         $q=0;
+         sleep(1);
+         echo$putih."[z] ".$ijo."sleep:$putih $sleep $ijo sec ".$ijo."loading ".$putih;
+         while($q<5){$q++;
+                     echo".";
+                     sleep(1);
+                    }
+         echo$t;
+      }
+   }
 ?>
 
 
