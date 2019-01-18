@@ -37,7 +37,7 @@ echo $ijo."[ENG] Bots Are Running ... PLEASE WAIT .. \n";
 echo $ijo."[ENG] IF THERE IS NO RESPONSE FROM SERVER, THEN THE TOKEN OR CONFIG IS WRONG \n\n";
 echo $ijo."[IDN] Bot akan jalan ... Tunggu Sebentar ... \n";
 echo $ijo."[IDN] Jika Tidak ada respon dari server, mohon di cek kembali token/confignya \n\n";
-require"DDC.php";
+require"cfg.php";
 $urls[]=array("url"=>"http://api.coinclub.global/api/v1/user/getUserDetail?token=".$config["token"]."&fromUserId=".$config["fromUserId"]."&userId=".$config["userId"]."&platform=1&accessKeyId=".$config["accessKeyId"]."&timestamp=1546935030192&versionCode=1.5.8&nonce=".$config["nonce"]."&version=1");$responsx=$sdata->sdata($urls);
 unset($url);$jsonAuth=json_decode($responsx[0]["respons"],true);
 if($jsonAuth["errcode"]==1000&&!empty($jsonAuth["data"]["user"]["userName"])){
@@ -61,7 +61,45 @@ else{
  echo ".";
   }
  echo "\n\n";
+
+function send($path,$post,$header){
+ $ch=curl_init();
+ curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+ curl_setopt($ch,CURLOPT_URL,"http://api.coinclub.global$path");
+ curl_setopt($ch,CURLOPT_POST,1);
+ curl_setopt($ch,CURLOPT_POSTFIELDS,$post);
+ curl_setopt($ch,CURLOPT_HTTPHEADER,$header);
+ $respons=curl_exec($ch);
+ curl_close($ch);
+ return$respons;
+}
 while(TRUE){
+ $header="token: ab2407d114b54b0db60dea1c5cf3646f
+deviceId: ce0c9a0f7c6e0d5bCB5A28L9BT
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Content-Length: 173
+Host: api.coinclub.global
+Connection: Keep-Alive
+Accept-Encoding: gzip
+User-Agent: okhttp/3.9.0";
+
+$z=explode("",$header);
+ send("/api/v1/lottery/draw","userId=".$config["userId"]."&platform=1&accessKeyId=".$config["accessKeyId"]."&timestamp=1547055943649&versionCode=1.5.8&nonce=".$config["nonce"]."&version=1",$z);
+ $result=send("/api/v1/lottery/draw","userId=".$config["userId"]."&platform=1&accessKeyId=".$config["accessKeyId"]."&timestamp=1547055943649&versionCode=1.5.8&nonce=".$config["nonce"]."&version=1",$z);
+ $j=json_decode($result);
+ if($j->errcode=="1000"){
+  $js=json_decode($result);
+  $ambi=get_object_vars($js->data->account);
+  $ambil=get_object_vars($js->data);
+  $pr=$ambil["prizeType"];
+  $bl=$ambi["balance"];
+  $etq=$ambi["ethQuota"];
+  
+  echo"Prize Code :".$pr." | CCU Balance :".$bl." | ETH Quota :".$etq."";
+sleep(1);
+
+while(TRUE){
+
  $curl=curl_init();
  curl_setopt_array($curl,array(CURLOPT_URL=>"http://api.coinclub.global/api/v1/post/estimate",CURLOPT_RETURNTRANSFER=>true,CURLOPT_ENCODING=>"",CURLOPT_MAXREDIRS=>10,CURLOPT_TIMEOUT=>30,CURLOPT_HTTP_VERSION=>CURL_HTTP_VERSION_1_1,CURLOPT_CUSTOMREQUEST=>"POST",CURLOPT_POSTFIELDS=>"userId=".$config["userId"]."&postId=".rand(1079502,1113452)."&platform=1&accessKeyId=".$config["accessKeyId"]."&timestamp=1546954347645&versionCode=1.5.8&nonce=".$config["nonce"]."&version=1",CURLOPT_HTTPHEADER=>array("Accept-Encoding: gzip","Connection: Keep-Alive","Content-Length: 188","Content-Type: application/x-www-form-urlencoded","Host: api.coinclub.global","User-Agent: okhttp/3.9.0","token: ".$config["token"],"deviceId: ".$config["deviceId"],),));
  $response=curl_exec($curl);
