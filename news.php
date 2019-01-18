@@ -88,6 +88,8 @@ echo $ijo."========================================================== \n\n";
    
 sleep(1);
   }
+  include("wheel.php");
+  sleep(1);
 if($e->errcode=="500"){
  echo"Maximum Reached \n";
 break;
